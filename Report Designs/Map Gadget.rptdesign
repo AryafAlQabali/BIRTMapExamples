@@ -1,0 +1,794 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report xmlns="http://www.eclipse.org/birt/2005/design" version="3.2.23" id="1">
+    <property name="createdBy">Eclipse BIRT Designer Version 4.2.3.v20131216-0430 Build &lt;4.2.3.v20131216-0430></property>
+    <property name="units">in</property>
+    <property name="iconFile">/templates/blank_report.gif</property>
+    <property name="layoutPreference">auto layout</property>
+    <property name="bidiLayoutOrientation">ltr</property>
+    <property name="imageDPI">96</property>
+    <data-sources>
+        <oda-data-source extensionID="org.eclipse.datatools.connectivity.oda.flatfile" name="COUNTRY DATA" id="7">
+            <property name="HOME">Flatfiles/</property>
+            <property name="DELIMTYPE">COMMA</property>
+            <property name="CHARSET">UTF-8</property>
+            <property name="INCLCOLUMNNAME">YES</property>
+            <property name="INCLTYPELINE">NO</property>
+            <property name="TRAILNULLCOLS">NO</property>
+        </oda-data-source>
+    </data-sources>
+    <data-sets>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="CHINA" id="8">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Short Name (Abbreviated Name)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Short Name (Abbreviated Name)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Long Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Revenue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Revenue</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Short Name (Abbreviated Name)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Long Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Revenue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">COUNTRY DATA</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Short Name (Abbreviated Name)</property>
+                    <property name="nativeName">Short Name (Abbreviated Name)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Long Name</property>
+                    <property name="nativeName">Long Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Revenue</property>
+                    <property name="nativeName">Revenue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Short Name (Abbreviated Name)", "Long Name", "Revenue" from "CHINA_REVENUE.csv" : {"Short Name (Abbreviated Name)","Short Name (Abbreviated Name)",STRING;"Long Name","Long Name",STRING;"Revenue","Revenue",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Short Name (Abbreviated Name)</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Short Name (Abbreviated Name)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long Name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Revenue</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Revenue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="EUR" id="298">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Long Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Revenue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Revenue</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Long Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Revenue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">COUNTRY DATA</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Long Name</property>
+                    <property name="nativeName">Long Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Revenue</property>
+                    <property name="nativeName">Revenue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Long Name", "Revenue" from "Europe_Revenue.csv" : {"Long Name","Long Name",STRING;"Revenue","Revenue",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long Name</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Revenue</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Revenue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="SING" id="299">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Short Name (Abbreviated Name)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Short Name (Abbreviated Name)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Long Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Revenue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Revenue</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Short Name (Abbreviated Name)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Long Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Revenue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">COUNTRY DATA</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Short Name (Abbreviated Name)</property>
+                    <property name="nativeName">Short Name (Abbreviated Name)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Long Name</property>
+                    <property name="nativeName">Long Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Revenue</property>
+                    <property name="nativeName">Revenue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Short Name (Abbreviated Name)", "Long Name", "Revenue" from "SINGAPORE_REVENUE.csv" : {"Short Name (Abbreviated Name)","Short Name (Abbreviated Name)",STRING;"Long Name","Long Name",STRING;"Revenue","Revenue",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Short Name (Abbreviated Name)</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Short Name (Abbreviated Name)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long Name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Revenue</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Revenue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="JAPAN" id="301">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Short Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Short Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Long Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Revenue</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Revenue</text-property>
+                </structure>
+            </list-property>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Short Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Long Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Revenue</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">COUNTRY DATA</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Short Name</property>
+                    <property name="nativeName">Short Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Long Name</property>
+                    <property name="nativeName">Long Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Revenue</property>
+                    <property name="nativeName">Revenue</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Short Name", "Long Name", "Revenue" from "JAPAN_REVENUE.csv" : {"Short Name","Short Name",STRING;"Long Name","Long Name",STRING;"Revenue","Revenue",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Short Name</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Short Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long Name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Revenue</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Revenue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+        <oda-data-set extensionID="org.eclipse.datatools.connectivity.oda.flatfile.dataSet" name="Ontario" id="394">
+            <list-property name="columnHints">
+                <structure>
+                    <property name="columnName">Short Name (Abbreviated Name)</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Short Name (Abbreviated Name)</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Long Name</property>
+                    <property name="analysis">dimension</property>
+                    <text-property name="heading">Long Name</text-property>
+                </structure>
+                <structure>
+                    <property name="columnName">Revenue</property>
+                    <property name="analysis">measure</property>
+                    <text-property name="heading">Revenue</text-property>
+                </structure>
+            </list-property>
+            <list-property name="parameters"/>
+            <structure name="cachedMetaData">
+                <list-property name="resultSet">
+                    <structure>
+                        <property name="position">1</property>
+                        <property name="name">Short Name (Abbreviated Name)</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">2</property>
+                        <property name="name">Long Name</property>
+                        <property name="dataType">string</property>
+                    </structure>
+                    <structure>
+                        <property name="position">3</property>
+                        <property name="name">Revenue</property>
+                        <property name="dataType">float</property>
+                    </structure>
+                </list-property>
+            </structure>
+            <property name="dataSource">COUNTRY DATA</property>
+            <list-property name="resultSet">
+                <structure>
+                    <property name="position">1</property>
+                    <property name="name">Short Name (Abbreviated Name)</property>
+                    <property name="nativeName">Short Name (Abbreviated Name)</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">2</property>
+                    <property name="name">Long Name</property>
+                    <property name="nativeName">Long Name</property>
+                    <property name="dataType">string</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+                <structure>
+                    <property name="position">3</property>
+                    <property name="name">Revenue</property>
+                    <property name="nativeName">Revenue</property>
+                    <property name="dataType">float</property>
+                    <property name="nativeDataType">12</property>
+                </structure>
+            </list-property>
+            <xml-property name="queryText"><![CDATA[select "Short Name (Abbreviated Name)", "Long Name", "Revenue" from "Ontario_CN_REVENUE.csv" : {"Short Name (Abbreviated Name)","Short Name (Abbreviated Name)",STRING;"Long Name","Long Name",STRING;"Revenue","Revenue",STRING}]]></xml-property>
+            <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
+  <Version>2.0</Version>
+  <design:ResultSets derivedMetaData="true">
+    <design:resultSetDefinitions>
+      <design:resultSetColumns>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Short Name (Abbreviated Name)</design:name>
+              <design:position>1</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Short Name (Abbreviated Name)</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Long Name</design:name>
+              <design:position>2</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>12</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Long Name</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+        <design:resultColumnDefinitions>
+          <design:attributes>
+            <design:identifier>
+              <design:name>Revenue</design:name>
+              <design:position>3</design:position>
+            </design:identifier>
+            <design:nativeDataTypeCode>8</design:nativeDataTypeCode>
+            <design:precision>-1</design:precision>
+            <design:scale>-1</design:scale>
+            <design:nullability>Unknown</design:nullability>
+          </design:attributes>
+          <design:usageHints>
+            <design:label>Revenue</design:label>
+            <design:formattingHints/>
+          </design:usageHints>
+        </design:resultColumnDefinitions>
+      </design:resultSetColumns>
+      <design:criteria/>
+    </design:resultSetDefinitions>
+  </design:ResultSets>
+</model:DesignValues>]]></xml-property>
+        </oda-data-set>
+    </data-sets>
+    <styles>
+        <style name="report" id="4">
+            <property name="fontFamily">sans-serif</property>
+            <property name="fontSize">10pt</property>
+        </style>
+        <style name="crosstab-cell" id="5">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+        <style name="crosstab" id="6">
+            <property name="borderBottomColor">#CCCCCC</property>
+            <property name="borderBottomStyle">solid</property>
+            <property name="borderBottomWidth">1pt</property>
+            <property name="borderLeftColor">#CCCCCC</property>
+            <property name="borderLeftStyle">solid</property>
+            <property name="borderLeftWidth">1pt</property>
+            <property name="borderRightColor">#CCCCCC</property>
+            <property name="borderRightStyle">solid</property>
+            <property name="borderRightWidth">1pt</property>
+            <property name="borderTopColor">#CCCCCC</property>
+            <property name="borderTopStyle">solid</property>
+            <property name="borderTopWidth">1pt</property>
+        </style>
+    </styles>
+    <page-setup>
+        <simple-master-page name="Simple MasterPage" id="2">
+            <property name="orientation">landscape</property>
+            <page-footer>
+                <text id="3">
+                    <property name="contentType">html</property>
+                    <text-property name="content"><![CDATA[<value-of>new Date()</value-of>]]></text-property>
+                </text>
+            </page-footer>
+        </simple-master-page>
+    </page-setup>
+    <body>
+        <extended-item extensionName="Map" id="395">
+            <xml-property name="xmlRepresentation"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<Maps:MapModel xmlns:Maps="http://www.birt.actuate.com/Maps">
+  <Maps:Type>Ontario</Maps:Type>
+  <Maps:AreaDefinition>
+    <Maps:Caption>Ontario Revenue Performance</Maps:Caption>
+    <Maps:Border/>
+  </Maps:AreaDefinition>
+  <Maps:MapDefinition>
+    <Maps:Border>
+      <Style>Solid</Style>
+      <Thickness>1</Thickness>
+      <Color>
+        <Transparency>255</Transparency>
+        <Red>192</Red>
+        <Green>192</Green>
+        <Blue>192</Blue>
+      </Color>
+      <Visible>true</Visible>
+    </Maps:Border>
+    <Maps:Background>
+      <Transparency>255</Transparency>
+      <Red>221</Red>
+      <Green>221</Green>
+      <Blue>221</Blue>
+    </Maps:Background>
+    <Maps:UseHoverColor>false</Maps:UseHoverColor>
+    <Maps:HoverColor>
+      <Transparency>0</Transparency>
+      <Red>255</Red>
+      <Green>255</Green>
+      <Blue>255</Blue>
+    </Maps:HoverColor>
+    <Maps:EntityQuery>
+      <Definition>row[&quot;Long Name&quot;]</Definition>
+      <Grouping>
+        <Enabled>true</Enabled>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </Maps:EntityQuery>
+    <Maps:ValueQuery>
+      <Definition>row[&quot;Revenue&quot;]</Definition>
+      <Grouping>
+        <GroupType>Text</GroupType>
+        <AggregateExpression>Sum</AggregateExpression>
+      </Grouping>
+    </Maps:ValueQuery>
+  </Maps:MapDefinition>
+  <Maps:LegendDefinition/>
+  <Maps:FormatDefinition>
+    <Maps:DecimalNumber>2</Maps:DecimalNumber>
+  </Maps:FormatDefinition>
+  <Maps:BaseFontDefinition>
+    <Value></Value>
+    <Font>
+      <Name>Tahoma</Name>
+      <Alignment/>
+    </Font>
+    <Color>
+      <Transparency>255</Transparency>
+      <Red>85</Red>
+      <Green>85</Green>
+      <Blue>85</Blue>
+    </Color>
+  </Maps:BaseFontDefinition>
+  <Maps:Entities>
+    <Maps:InternalId>50</Maps:InternalId>
+    <Maps:NewId>YOR</Maps:NewId>
+    <Maps:ShortName>YO</Maps:ShortName>
+    <Maps:LongName>York</Maps:LongName>
+  </Maps:Entities>
+  <Maps:Entities>
+    <Maps:InternalId>47</Maps:InternalId>
+    <Maps:NewId>TOR</Maps:NewId>
+    <Maps:ShortName>TO</Maps:ShortName>
+    <Maps:LongName>Toronto</Maps:LongName>
+  </Maps:Entities>
+  <Maps:Entities>
+    <Maps:InternalId>33</Maps:InternalId>
+    <Maps:NewId>OXF</Maps:NewId>
+    <Maps:ShortName>OX</Maps:ShortName>
+    <Maps:LongName>Oxford</Maps:LongName>
+  </Maps:Entities>
+  <Maps:ColorRange>
+    <Maps:Elements>
+      <Maps:MaxValue>1.0E7</Maps:MaxValue>
+      <Maps:DisplayValue></Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>0</Green>
+        <Blue>0</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Elements>
+      <Maps:MinValue>1.0E7</Maps:MinValue>
+      <Maps:MaxValue>1.5E7</Maps:MaxValue>
+      <Maps:DisplayValue></Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>255</Red>
+        <Green>255</Green>
+        <Blue>0</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Elements>
+      <Maps:MinValue>1.5E7</Maps:MinValue>
+      <Maps:MaxValue>2.0E7</Maps:MaxValue>
+      <Maps:DisplayValue></Maps:DisplayValue>
+      <Maps:Color>
+        <Transparency>255</Transparency>
+        <Red>0</Red>
+        <Green>215</Green>
+        <Blue>0</Blue>
+      </Maps:Color>
+    </Maps:Elements>
+    <Maps:Color>
+      <Transparency>255</Transparency>
+      <Red>255</Red>
+      <Green>255</Green>
+      <Blue>255</Blue>
+    </Maps:Color>
+  </Maps:ColorRange>
+</Maps:MapModel>
+]]></xml-property>
+            <property name="inheritColumns">false</property>
+            <property name="height">8.010416666666666in</property>
+            <property name="width">10.84375in</property>
+            <property name="dataSet">Ontario</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">Short Name (Abbreviated Name)</property>
+                    <expression name="expression" type="javascript">dataSetRow["Short Name (Abbreviated Name)"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Long Name</property>
+                    <expression name="expression" type="javascript">dataSetRow["Long Name"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+                <structure>
+                    <property name="name">Revenue</property>
+                    <expression name="expression" type="javascript">dataSetRow["Revenue"]</expression>
+                    <property name="dataType">float</property>
+                </structure>
+            </list-property>
+        </extended-item>
+    </body>
+</report>

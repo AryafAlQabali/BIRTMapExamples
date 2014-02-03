@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.actuate.istudio.analysis.model:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.actuate.istudio.analysis.model="http:///com.actuate.istudio.analysis.model.ecore" name="BIRTMapExamples">
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="CHINA.rptdesign" path="/BIRTMapExamples/Report Designs/CHINA.rptdesign">
+    <dataSets name="Data Set">
+      <columns name="Short Name (Abbreviated Name)"/>
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+  </files>
+  <files xsi:type="com.actuate.istudio.analysis.model:RptDesign" name="Map Gadget.rptdesign" path="/BIRTMapExamples/Report Designs/Map Gadget.rptdesign">
+    <dataSets name="CHINA">
+      <columns name="Short Name (Abbreviated Name)"/>
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+    <dataSets name="EUR">
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+    <dataSets name="SING">
+      <columns name="Short Name (Abbreviated Name)"/>
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+    <dataSets name="JAPAN">
+      <columns name="Short Name"/>
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+    <dataSets name="Ontario">
+      <columns name="Short Name (Abbreviated Name)"/>
+      <columns name="Long Name"/>
+      <columns name="Revenue"/>
+    </dataSets>
+  </files>
+</com.actuate.istudio.analysis.model:Project>
